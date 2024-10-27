@@ -4,8 +4,8 @@ const Navigation = ({ account, setAccount }) => {
 
     const connectHandler = async () => {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-        const account = ethers.utils.getAddress(accounts[0]);
-        setAccount(account)
+        const account = ethers.utils.getAddress(accounts[0])
+        setAccount(account);
     }
 
     return (
@@ -18,6 +18,7 @@ const Navigation = ({ account, setAccount }) => {
                 type="text"
                 className="nav__search"
             />
+
             {account ? (
                 <button
                     type="button"
